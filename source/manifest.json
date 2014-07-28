@@ -1,0 +1,56 @@
+{
+    "manifest_version": 2,
+    
+    "permissions": [
+        "contextMenus",
+        "notifications",
+        "storage",
+        "tabs",
+        "<all_urls>"
+    ],
+    
+    "icons": {
+        "16": "images/pyload_16.png",
+        "48": "images/pyload_48.png",
+        "128": "images/pyload_128.png"
+    },
+
+    "name"            : "pyLoad Chrome",
+    
+    "version"         : "1.0",
+    
+    "description"     : "Permet de lancer des téléchargements via pyLoad directement depuis le navigateur.",
+    
+    "background": {
+        "scripts": [
+            "js/jquery.js",
+            "js/pyload_api.js",
+            "js/fonctions.js",
+            "background.js"
+        ]
+    },
+
+    "options_page": "options.html",
+
+    "browser_action": {
+        "default_title": "Téléchargement en cours",
+        "default_icon": "images/pyload_48.png",
+        "default_popup": "popup.html"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": [
+                "js/jquery.js",
+                "js/fonctions.js",
+                "content_scripts.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+
+    "web_accessible_resources": [
+        "js/jquery-1.10.2.min.map"
+    ]
+}

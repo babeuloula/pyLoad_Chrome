@@ -1,0 +1,30 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>PyLoad Chrome &bull; Parser</title>
+
+	<link title="defaut" type="text/css" rel="stylesheet" href="css/style.css" media="screen">
+</head>
+<body>
+
+	<div class="container" style="width:900px;">
+		<form id="parser">
+			<h1>Sélectionnez les liens à télécharger</h1>
+
+			<h2>Nom du package</h2>
+			<input type="hidden" id="package">
+
+			<div class="links"></div>
+
+			<input type="submit" id="telecharger" value="Télécharger" class="bouton">
+		</form>
+	</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/fonctions.js"></script>
+	<script type="text/javascript" src="js/pyload_api.js"></script>
+	<script type="text/javascript" src="background.js"></script>
+	<script type="text/javascript" src="parser.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>PyLoad Chrome &bull; Options</title>
+
+	<link title="defaut" type="text/css" rel="stylesheet" href="css/style.css" media="screen">
+</head>
+<body>
+
+	<div class="container">
+		<h1>Options</h1>
+
+		<h2>Compte</h2>
+		<div class="connexion">
+			<label>Pseudo</label>
+			<input type="text" id="pseudo" name="pseudo" class="input" value="">
+
+			<label>Mot de passe</label>
+			<input type="password" id="passwd" name="passwd" class="input" value="">
+
+			<h2>Serveur</h2>
+
+			<label>IP ou Hostname du serveur</label>
+			<input type="text" id="ip" name="ip" class="input" value="">
+
+			<label>Port du serveur</label>
+			<input type="text" id="port" name="port" class="input" value="">
+
+			<input type="submit" id="connexion" value="Connexion" class="bouton">
+		</div>
+		
+		<div class="deconnexion">
+			<p>Vous êtes connecté en tant que <span id="affichePseudo"></span> au serveur <span id="serveur"></span>.</p>
+
+			<input type="submit" id="deconnexion" value="Déconnexion" class="bouton">
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/fonctions.js"></script>
+	<script type="text/javascript" src="js/pyload_api.js"></script>
+	<script type="text/javascript" src="options.js"></script>
+</body>
+</html>
